@@ -15,16 +15,16 @@ class BaseBallGame {
 	    return this.newNumber;
 	  }
 	  else{
-	    this.newNumber = [Math.floor(Math.random()*10),Math.floor(Math.random()*10),Math.floor(Math.random()*10)]
+	    this.newNumber = [Math.floor(Math.random()*10),
+	                      Math.floor(Math.random()*10),
+	                      Math.floor(Math.random()*10)
+	                     ];
+	    }
 	  }
 	}
-	}
-  
-
-  
   // 동작
-  
   // - 체크
+  
   
 }
 
