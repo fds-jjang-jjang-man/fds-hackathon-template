@@ -1,24 +1,21 @@
-$main-color: white;
-$title-color : black;
 body {
-  background-color: $main-color;
+  background-color: white;
 }
 
-.title{
-  color: $title-color;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-
-}
-
-.numbers{
+.title {
+  color: black;
   display: flex;
   text-align: center;
   justify-content: center;
 }
 
-.number{
+.numbers {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.number {
   width: 50px;
   height: 50px;
   margin: 10px;
@@ -26,23 +23,21 @@ body {
   text-align: center;
 }
 
-
-
-.go{
+.go {
   background-color: #181818;
   width: 50px;
   height: 50px;
   margin: 10px;
   border: 0;
-  color:white
+  color: white;
 }
 
-.restart{
-  
+.restart {
   width: 50px;
   height: 50px;
   margin: 10px;
   border: 0;
-  color:white;
+  color: white;
   background-color: #181818;
 }
+/*# sourceMappingURL=index.css.map */
