@@ -1,5 +1,6 @@
 $main-color: white;
 $title-color : black;
+
 body {
   background-color: $main-color;
 }
@@ -9,35 +10,45 @@ body {
   display: flex;
   text-align: center;
   justify-content: center;
-
+  color: #181818;
 }
 
 .numbers{
   display: flex;
   text-align: center;
   justify-content: center;
-
+  
 
 }
 
 .number1{
 
-
+color: white;
   width: 50px;
   height: 50px;
   margin: 10px;
   font-size: 50px;
   text-align: center;
+   border-radius: 10px;
+  background-color: #181818;
+   border: 10;
+   border-color: skyblue;
+  
 }
 
 .number2 {
 
-
+color: white;
   width: 50px;
   height: 50px;
   margin: 10px;
   font-size: 50px;
   text-align: center;
+   border-radius: 10px;
+  background-color: #181818;
+   border: 10;
+   border-color: red;
+  color: white;
 }
 .number3{
 
@@ -47,30 +58,54 @@ body {
   margin: 10px;
   font-size: 50px;
   text-align: center;
+   border-radius: 10px;
+  background-color: #181818;
+   border: 10;
+   border-color: gold;
+   color: white;
 }
 
 
 .go{
+  border-radius: 10px;
   background-color: #181818;
+   border: 0;
   width: 50px;
   height: 50px;
   margin: 10px;
-  border: 0;
+  font-size: 15px;
   color:white;
-  cursor: none;
+  cursor: pointer;
+  
 }
 
 .restart{
-  
+  font-size: 15px;
   width: 50px;
   height: 50px;
   margin: 10px;
   border: 0;
   color:white;
   background-color: #181818;
-  cursor: none;
+  cursor: pointer;
+   border-radius: 10px;
 }
 
-.answer{
+.answer-box{
   // display: none
+  text-align: center;
+  
+}
+
+.user{
+  display: none;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  
+
+}
+.fs{
+ 
+
 }

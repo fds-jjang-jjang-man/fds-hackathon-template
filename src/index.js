@@ -1,6 +1,7 @@
 const number1El = document.querySelector('.number1')
 const number2El = document.querySelector(".number2")
 const number3El = document.querySelector(".number3")
+const numbersEl = document.querySelector('.numbers')
 const goEl = document.querySelector('.go')
 const restartEl = document.querySelector('.restart')
 const answerEl = document.querySelector('.answer')
@@ -40,12 +41,9 @@ class BaseBallGame {
   // }
 }
 
+
+
+
+
 const game = new BaseBallGame();
 answerEl.textContent = game.randomNum();
-
-
-number1El.addEventListener('keydown', e =>{
-
-return number2El;
-
-} )
