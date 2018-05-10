@@ -2,12 +2,18 @@ import { ftruncateSync } from "fs";
 
 const numberInputEl = document.getElementsByClassName("number-input");
 const numberOutputEl = document.getElementsByClassName("number-output");
+const notChangeNum = document.querySelector(".number-input");
 const goEl = document.querySelector(".go");
+const reEl = document.querySelector(".restart");
+const inputNextEl = document.querySelector('.number-input-list');
 const outputEl = document.querySelector(".number-output-list");
 const cloneEl = document.querySelector(".output-clone");
 const outputResultEl = document.querySelector(".output-result");
 const endResultEl = document.querySelector(".end-result");
 const endScoreEl = document.querySelector(".end-result-score");
+
+// focus가 첫번쨰 input안에 고정
+inputNextEl.childNodes[1].focus();
 
 class BaseBallGame {
  // 상태
@@ -56,11 +62,11 @@ class BaseBallGame {
  }
 }
 
-
-
+//게임 시작
 const gameStart = new BaseBallGame();
 console.log(`랜덤 배열 : ${gameStart.randomNum()}`);
 
+//시도 버튼
 goEl.addEventListener("click", e => {
   let array = [];
 
@@ -87,14 +93,40 @@ goEl.addEventListener("click", e => {
   else if(gameStart.checker(array)[1] != 0){
     outputResultEl.textContent = `strike : ${gameStart.checker(array)[1]}`;
     if(gameStart.checker(array)[1] === 3){
-      goEl.setAttribute('disabled','true');
-      endResultEl.classList.add( 'open-score' );
-      endScoreEl.textContent = `${gameStart.randomNum()}`;
+      endGameLogic();
     }
   }
-
-
+  endGame();
   outputEl.appendChild(cloneEl.cloneNode(true));
-
+  inputNextEl.childNodes[1].focus();
 });
 
+// 다시 시작 버튼
+reEl.addEventListener('click',e =>{
+  window.location.reload();  
+});
+
+inputNextEl.childNodes[1].focus();
+
+inputNextEl.addEventListener('keyup',e => {
+  for(let i = 1; i < inputNextEl.childNodes.length; i+=2){
+    if(inputNextEl.childNodes[i].value != ""){
+       inputNextEl.childNodes[i+2].focus();
+     }
+  }
+});
+
+// 10번 입력 받았을때 종료시키는 함수
+function endGame(){
+  if(outputEl.childNodes.length === 12){
+    endGameLogic();
+  }
+}
+
+//종료 함수 내부 로직
+function endGameLogic(){
+  goEl.setAttribute('disabled','true');
+  notChangeNum.setAttribute('disabled','true');
+  endResultEl.classList.add( 'open-score' );
+  endScoreEl.textContent = `${gameStart.randomNum()}`;
+}
