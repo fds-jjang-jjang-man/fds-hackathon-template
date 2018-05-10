@@ -1,18 +1,21 @@
-const number1El = document.querySelector('.number1')
-const number2El = document.querySelector(".number2")
-const number3El = document.querySelector(".number3")
-const numbersEl = document.querySelector('.numbers')
-const goEl = document.querySelector('.go')
-const restartEl = document.querySelector('.restart')
-const answerEl = document.querySelector('.answer')
+const numberInputEl = document.getElementsByClassName("number-input");
+const numberOutputEl = document.getElementsByClassName("number-output");
+const goEl = document.querySelector(".go");
+const outputEl = document.querySelector(".number-output-list");
+const cloneEl = document.querySelector(".output-clone");
+const restartEl = document.querySelector('.restart') 
+
 
 class BaseBallGame {
   // 상태
-   newNumber = [
+  newNumber = [
     Math.floor(Math.random() * 10),
     Math.floor(Math.random() * 10),
     Math.floor(Math.random() * 10)
   ];
+  strike = 0;
+  ball = 0;
+  out = 0;
 
   // 중복되지 않는 숫자 반환
   randomNum() {
@@ -32,18 +35,39 @@ class BaseBallGame {
       }
     }
   }
-  // 동작
-  // - 체크
-  // checker(){
-  //   const number = [1,2,3];
-  //   if(this.)
 
-  // }
+  // 동작
+  // ball,strkie,out 판별 및 카운트
+  checker(inputNum) {
+    for (let i = 0; i < this.newNumber.length; i++) {
+      if (this.newNumber[i] === inputNum[i]) {
+        this.strike++;
+      } else if (
+        this.newNumber[i] != inputNum[i] &&
+        this.newNumber.includes(inputNum[i])
+      ) {
+        this.ball++;
+      } else this.out;
+    }
+    return [this.ball, this.strike, this.out];
+  }
 }
 
 
 
 
 
+
+
+goEl.addEventListener("click", e => {
+  for (let i = 0; i < numberInputEl.length; i++) {
+    numberOutputEl[i].textContent = numberInputEl[i].value;
+    numberInputEl[i].value = "" ;
+  }
+
+   outputEl.appendChild(cloneEl.cloneNode(true)); 
+});
+
+
 const game = new BaseBallGame();
-answerEl.textContent = game.randomNum();
+
