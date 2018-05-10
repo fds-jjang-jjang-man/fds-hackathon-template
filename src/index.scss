@@ -2,74 +2,91 @@ $main-color: white;
 $title-color : black;
 
 body {
-  background-color: $main-color;
+ background-color: $main-color;
 }
 
 .title{
-  color: $title-color;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  color: #181818;
+ color: $title-color;
+ display: flex;
+ text-align: center;
+ justify-content: center;
+ color: #181818;
 }
 
 .number-input-list{
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  flex-direction: row;
+ display: flex;
+ text-align: center;
+ justify-content: center;
+ flex-direction: row;
 }
 
+.number-output-list{
+ 
+ overflow: hidden;
+ 
+ 
+}
+
+.cheat{
+
+
+margin-top: -70px;
+
+}
 .output-clone{
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
+ display: flex;
+ justify-content: center;
+ flex-direction: row;
+ 
+
 }
 
 .number-input, .number-output{
-  color: white;
-  width: 50px;
-  height: 50px;
-  margin: 10px;
-  font-size: 50px;
-  text-align: center;
-  border-radius: 10px;
-  background-color: #181818;
-  border: 10;
-  border-color: skyblue;  
+ color: white;
+ width: 50px;
+ height: 50px;
+ margin: 10px;
+ font-size: 50px;
+ text-align: center;
+ border-radius: 10px;
+ background-color: #181818;
+ border: 10;
+ border-color: skyblue;  
 }
 
 .number-output{
-  font-size: 30px;
+ font-size: 30px;
 }
 
 .go{
-  border-radius: 10px;
-  background-color: #181818;
-  border: 0;
-  width: 50px;
-  height: 50px;
-  margin: 10px;
-  font-size: 15px;
-  color:white;
-  cursor: pointer;
-  
+ border-radius: 10px;
+ background-color: #181818;
+ border: 0;
+ width: 50px;
+ height: 50px;
+ margin: 10px;
+ font-size: 15px;
+ color:white;
+ cursor: pointer;
+ 
 }
 
 .restart{
-  font-size: 15px;
-  width: 50px;
-  height: 50px;
-  margin: 10px;
-  border: 0;
-  color:white;
-  background-color: #181818;
-  cursor: pointer;
-   border-radius: 10px;
+ font-size: 15px;
+ width: 50px;
+ height: 50px;
+ margin: 10px;
+ border: 0;
+ color:white;
+ background-color: #181818;
+ cursor: pointer;
+  border-radius: 10px;
 }
 
-.answer-box{
-  // display: none
-  text-align: center;
-  
+.end-result{
+  display: none;
+}
+
+.open-score{
+  display: block;
 }
