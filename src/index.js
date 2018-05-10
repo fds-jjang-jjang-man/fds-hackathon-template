@@ -3,8 +3,6 @@ const numberOutputEl = document.getElementsByClassName("number-output");
 const goEl = document.querySelector(".go");
 const outputEl = document.querySelector(".number-output-list");
 const cloneEl = document.querySelector(".output-clone");
-const restartEl = document.querySelector('.restart') 
-
 
 class BaseBallGame {
   // 상태
@@ -53,21 +51,11 @@ class BaseBallGame {
   }
 }
 
-
-
-
-
-
-
 goEl.addEventListener("click", e => {
   for (let i = 0; i < numberInputEl.length; i++) {
     numberOutputEl[i].textContent = numberInputEl[i].value;
-    numberInputEl[i].value = "" ;
+    numberInputEl[i].value = "";
   }
 
-   outputEl.appendChild(cloneEl.cloneNode(true)); 
+  outputEl.appendChild(cloneEl.cloneNode(true));
 });
-
-
-const game = new BaseBallGame();
-
