@@ -1,9 +1,19 @@
+<<<<<<< HEAD
 const number1El = document.querySelector('.number1');
 const number2El = document.querySelector('.number2');
 const number3El = document.querySelector('.number3');
 const goEl = document.querySelector('.go');
 const restartEl = document.querySelector('.restart');
 const answerEl = document.querySelector('.answer');
+=======
+const number1El = document.querySelector('.number1')
+const number2El = document.querySelector(".number2")
+const number3El = document.querySelector(".number3")
+const numbersEl = document.querySelector('.numbers')
+const goEl = document.querySelector('.go')
+const restartEl = document.querySelector('.restart')
+const answerEl = document.querySelector('.answer')
+>>>>>>> ea41803d2aec36cc585e64dba5b68866b17e1b5e
 
 class BaseBallGame {
   // 상태
@@ -48,3 +58,13 @@ class BaseBallGame {
     return [this.ball,this.strike,this.out];
   }
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+
+const game = new BaseBallGame();
+answerEl.textContent = game.randomNum();
+>>>>>>> ea41803d2aec36cc585e64dba5b68866b17e1b5e
