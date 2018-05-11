@@ -2,35 +2,39 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>해커톤 템플릿 프로젝트</title>
-  <link rel="stylesheet" href="./index.scss">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>해커톤 템플릿 프로젝트</title>
+ <link rel="stylesheet" href="./index.scss">
 </head>
 
 <body>
-  <h1 class="title">NUMBER'S BASEBALL</h1>
-
-  <div class="number-input-list">
-    <input type="text" maxlength="1" class="number-input" value='' />
-    <input type="text" maxlength="1" class="number-input" value='' />
-    <input type="text" maxlength="1" class="number-input" value='' />
-    <button class="go">TRY</button>
-    <button class="restart">RE</button>
+  <div class="fixed">
+  <div class="title">NUMBER'S BASEBALL</div>
   </div>
+  <!-- autofocus="autofocus -->
+<div class="number-input-list">
+ <input type="text" maxlength="1" class="number-input" value=''/>
+ <input type="text" maxlength="1" class="number-input" value=''/>
+ <input type="text" maxlength="1" class="number-input" value=''/>
+ <button class="go">TRY</button>
+ <button class="restart">RE</button>
+</div>
 
-  <div class="number-output-list">
-    <div class="cheat">
-      <div class="output-clone">
-        <div class='number-output'></div>
-        <div class='number-output'></div>
-        <div class='number-output'></div>
-      </div>
-    </div>
-  </div>
+<div class = "number-output-list">
+ <div class="cheat">
+   <div class="output-clone">
+     <div class="num"></div>
+     <div class="number-output"></div>
+     <div class="number-output"></div>
+     <div class="number-output"></div>
+     <div class="output-result"></div>
+   </div>  
+   </div>
+</div>
+<div class="end-result"> <span class="end-result-score"></span></div>
 
   <script src="./index.js"></script>
 </body>
-
 </html>
