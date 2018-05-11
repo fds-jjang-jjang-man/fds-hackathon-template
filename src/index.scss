@@ -1,44 +1,57 @@
 $main-color: white;
 $title-color : black;
 
-body {
- background-color: $main-color;
+html, body{
+  height: 100%;
+  margin: 0;
+  background-color: $main-color;
 }
 
+.container{
+  min-height: 100%;
+  position: relative;
+}
+
+
+footer{
+  position: absolute;
+  bottom:0;
+  background: black;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+}
+
+
 .title{
- color: $title-color;
- display: flex;
- text-align: center;
- justify-content: center;
- color: #181818;
+  background: black;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
 }
 
 .number-input-list{
  display: flex;
  text-align: center;
  justify-content: center;
- flex-direction: row;
+ flex-direction: row; 
 }
 
 .number-output-list{
- 
  overflow: hidden;
- 
- 
 }
 
 .cheat{
-
-
 margin-top: -70px;
-
 }
+
 .output-clone{
  display: flex;
  justify-content: center;
  flex-direction: row;
- 
-
 }
 
 .number-input, .number-output{
@@ -48,45 +61,51 @@ margin-top: -70px;
  margin: 10px;
  font-size: 50px;
  text-align: center;
- border-radius: 10px;
  background-color: #181818;
+ border-radius: 10px;
  border: 10;
  border-color: skyblue;  
+ outline: 0;
 }
 
 .number-output{
  font-size: 30px;
 }
 
-.go{
- border-radius: 10px;
- background-color: #181818;
- border: 0;
- width: 50px;
- height: 50px;
- margin: 10px;
- font-size: 15px;
- color:white;
- cursor: pointer;
- 
-}
-
-.restart{
- font-size: 15px;
- width: 50px;
- height: 50px;
- margin: 10px;
- border: 0;
- color:white;
- background-color: #181818;
- cursor: pointer;
+.go, .restart{
   border-radius: 10px;
+  background-color:#181818;
+  outline: 0;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  font-size: 15px;
+  color:#c7c9d3;
+  cursor: pointer;
+  border-color: #bf172c;
+  border-width: 3px;
 }
 
 .end-result{
   display: none;
+  text-align: center;
 }
 
 .open-score{
   display: block;
+}
+
+
+.output-result{
+  width: 145px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.num{
+  width:10 px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
 }
