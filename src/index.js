@@ -24,12 +24,8 @@ class BaseBallGame {
     Math.floor(Math.random() * 10),
     Math.floor(Math.random() * 10)
   ];
-<<<<<<< HEAD
   // 혹시나 위에 중복된 숫자가 나올수 도 있으니 while 함수로 중복된 숫자가
   // 안나올떄 까지 생성함
-=======
-  // 중복되지 않는 숫자 반환
->>>>>>> 44408ebb81da17b78c9cd5a5d96f7d73be2572ae
   randomNum() {
     while (1) {
       if (
@@ -74,7 +70,6 @@ class BaseBallGame {
   }
 }
 
-<<<<<<< HEAD
 //위에 만들어 놓은 class을 사용하기 좋게 변수 gameStart에 저장
 
 const gameStart = new BaseBallGame();
@@ -90,18 +85,6 @@ console.log(`랜덤 배열 : ${gameStart.randomNum()}`);
 goEl.addEventListener("click", e => {
 
   let array = [];
-=======
-//게임 시작
-const gameStart = new BaseBallGame();
-console.log(`랜덤 배열 : ${gameStart.randomNum()}`);
-
-let count = 0;
-//시도 버튼
-goEl.addEventListener("click", e => {
-  let array = [];
-  
-  //회차 로직
->>>>>>> 44408ebb81da17b78c9cd5a5d96f7d73be2572ae
   function numCount(){
     count++;
     console.log(count);
@@ -109,11 +92,8 @@ goEl.addEventListener("click", e => {
   }
   numEl.textContent = `${numCount()}회`;
 
-<<<<<<< HEAD
   
 
-=======
->>>>>>> 44408ebb81da17b78c9cd5a5d96f7d73be2572ae
   for (let i = 0; i < numberInputEl.length; i++) {
     numberOutputEl[i].textContent = numberInputEl[i].value;
     numberOutputEl[i].value = numberInputEl[i].value;
@@ -140,11 +120,7 @@ goEl.addEventListener("click", e => {
   } else if (gameStart.checker(array)[1] != 0) {
     outputResultEl.textContent = `strike : ${gameStart.checker(array)[1]}`;
     if (gameStart.checker(array)[1] === 3) {
-<<<<<<< HEAD
       endGameLogic();
-=======
-      endWinGameLogic();
->>>>>>> 44408ebb81da17b78c9cd5a5d96f7d73be2572ae
     }
   }
   endGame();
@@ -155,7 +131,6 @@ goEl.addEventListener("click", e => {
 // 다시 시작 버튼
 reEl.addEventListener("click", e => {
   window.location.reload();
-<<<<<<< HEAD
 });
 
 inputNextEl.childNodes[1].focus();
@@ -190,39 +165,3 @@ function endGameLogic() {
   endScoreEl.textContent = `WINNER WINNER CHICKEN DINNER THE ANSWER IS ${gameStart.randomNum()}`;
   
 }
-=======
-});
-
-inputNextEl.childNodes[1].focus();
-
-inputNextEl.addEventListener("keyup", e => {
-  for (let i = 1; i < inputNextEl.childNodes.length; i += 2) {
-    if (inputNextEl.childNodes[i].value != "") {
-      inputNextEl.childNodes[i + 2].focus();
-    }
-  }
-});
-
-// 10번 입력 받았을때 종료시키는 함수
-function endGame() {
-  if (outputEl.childNodes.length === 12) {
-    endLoseGameLogic();
-  }
-}
-
-//이겼을때 종료 함수 내부 로직
-function endWinGameLogic() {
-  goEl.setAttribute("disabled", "true");
-  notChangeNum.setAttribute("disabled", "true");
-  endResultEl.classList.add("open-score");
-  endScoreEl.textContent = `WINNER WINNER CHICKEN DINNER !!!!! THE ANSWER IS : ${gameStart.randomNum()}`;
-}
-
-//졌을때 종료 함수 내부 로직
-function endLoseGameLogic() {
-  goEl.setAttribute("disabled", "true");
-  notChangeNum.setAttribute("disabled", "true");
-  endResultEl.classList.add("open-score");
-  endScoreEl.textContent = `YOU LOSE!!!!!  THE ANSWER IS : ${gameStart.randomNum()}`;
-}
->>>>>>> 44408ebb81da17b78c9cd5a5d96f7d73be2572ae

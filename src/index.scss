@@ -7,7 +7,6 @@ html, body{
   background-color: $main-color;
 }
 
-<<<<<<< HEAD
 .fixed{
 display: flex;
  text-align: center;
@@ -26,45 +25,15 @@ display: flex;
   border-radius: 10px;
  border: 10px;
  border-color: skyblue;  
- height: 50px;;
-=======
-.container{
-  min-height: 100%;
-  position: relative;
-}
-
-
-footer{
-  position: absolute;
-  bottom:0;
-  background: black;
-  width: 100%;
-  text-align: center;
-  color: white;
-  font-size: 1rem;
-}
-
-
-.title{
-  background: black;
-  width: 100%;
-  padding: 15px 0;
-  text-align: center;
-  color: white;
-  font-size: 2.5rem;
->>>>>>> 44408ebb81da17b78c9cd5a5d96f7d73be2572ae
+ height: 50px;
 }
 
 .number-input-list{
  display: flex;
  text-align: center;
  justify-content: center;
-<<<<<<< HEAD
  flex-direction: row;
  
-=======
- flex-direction: row; 
->>>>>>> 44408ebb81da17b78c9cd5a5d96f7d73be2572ae
 }
 
 .number-output-list{
@@ -72,10 +41,6 @@ footer{
 }
 
 .cheat{
-<<<<<<< HEAD
-
-=======
->>>>>>> 44408ebb81da17b78c9cd5a5d96f7d73be2572ae
 margin-top: -70px;
 }
 
@@ -83,11 +48,8 @@ margin-top: -70px;
  display: flex;
  justify-content: center;
  flex-direction: row;
-<<<<<<< HEAD
 margin-top: -10px;
 
-=======
->>>>>>> 44408ebb81da17b78c9cd5a5d96f7d73be2572ae
 }
 
 .number-input, .number-output{
@@ -99,12 +61,8 @@ margin-top: -10px;
  text-align: center;
  background-color: #181818;
  border-radius: 10px;
-<<<<<<< HEAD
    margin-top: px;
  border-width:3px;
-=======
- border: 10;
->>>>>>> 44408ebb81da17b78c9cd5a5d96f7d73be2572ae
  border-color: skyblue;  
  outline: 0;
 }
@@ -115,7 +73,6 @@ margin-top: -10px;
 }
 
 .go, .restart{
-<<<<<<< HEAD
  border-radius: 10px;
  background-color:#181818;
  outline: 0;
@@ -128,31 +85,7 @@ margin-top: -10px;
  border-color: #bf172c;
  border-width: 3px;
  
-=======
-  border-radius: 10px;
-  background-color:#181818;
-  outline: 0;
-  width: 50px;
-  height: 50px;
-  margin: 10px;
-  font-size: 15px;
-  color:#c7c9d3;
-  cursor: pointer;
-  border-color: #bf172c;
-  border-width: 3px;
->>>>>>> 44408ebb81da17b78c9cd5a5d96f7d73be2572ae
 }
-.end-result{
-  display: none;
-  text-align: center;
-}
-
-<<<<<<< HEAD
-.open-score{
-  display: block;
-}
-
-=======
 .end-result{
   display: none;
   text-align: center;
@@ -162,29 +95,21 @@ margin-top: -10px;
   display: block;
 }
 
->>>>>>> 44408ebb81da17b78c9cd5a5d96f7d73be2572ae
 
 .output-result{
   width: 145px;
   margin-top: 20px;
   display: flex;
   justify-content: space-around;
-<<<<<<< HEAD
   
 
-=======
->>>>>>> 44408ebb81da17b78c9cd5a5d96f7d73be2572ae
 }
 
 .num{
   width:10 px;
   margin-top: 20px;
   display: flex;
-<<<<<<< HEAD
   
   justify-content: space-around;
 
-=======
-  justify-content: space-around;
->>>>>>> 44408ebb81da17b78c9cd5a5d96f7d73be2572ae
 }
